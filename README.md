@@ -1,1 +1,1 @@
-# supervised-log-anoaly-detection
+# supervised-log-anomaly-detection
