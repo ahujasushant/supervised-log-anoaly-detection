@@ -2,7 +2,7 @@ import json
 import matplotlib.pylab as plt
 
 d = {}
-with open("data/HDFS.log") as f:
+with open("../data/HDFS.log") as f:
     count = 0
     for line in f:
         count += 1

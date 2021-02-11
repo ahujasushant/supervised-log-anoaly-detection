@@ -3,7 +3,7 @@ import matplotlib.pylab as plt
 import csv
 
 d = {'Normal': 0, 'Anomaly': 0}
-with open("data/anomaly_label.csv") as f:
+with open("../data/anomaly_label.csv") as f:
     reader = csv.DictReader(f, delimiter=',')
     for row in reader:
         if row['Label'] == 'Anomaly':

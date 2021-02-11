@@ -2,7 +2,7 @@ import csv
 import json
 
 d = {}
-with open("data/HDFS.log") as f:
+with open("../data/HDFS.log") as f:
     count = 0
     for line in f:
         count += 1
@@ -15,7 +15,7 @@ with open("data/HDFS.log") as f:
 
 length_dict = {key: len(value) for key, value in d.items()}
 a = {}
-with open("data/anomaly_label.csv") as f:
+with open("../data/anomaly_label.csv") as f:
     reader = csv.DictReader(f, delimiter=',')
     for row in reader:
         if row['Label'] == 'Anomaly' and row['BlockId'] in length_dict:
@@ -24,7 +24,7 @@ with open("data/anomaly_label.csv") as f:
 print(a)
 
 n = {}
-with open("data/anomaly_label.csv") as f:
+with open("../data/anomaly_label.csv") as f:
     reader = csv.DictReader(f, delimiter=',')
     for row in reader:
         if row['Label'] == 'Normal' and row['BlockId'] in length_dict:
